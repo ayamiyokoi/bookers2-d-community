@@ -12,7 +12,17 @@ class BooksController < ApplicationController
     @books = Book.all
     @book = Book.new
   end
-
+  
+  def date
+    @books = Book.order(:created_at)
+    @book = Book.new
+  end
+  
+  def rate
+    @books = Book.order(:rate)
+    @book = Book.new
+  end
+  
   def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id
