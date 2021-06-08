@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-  get 'finders/finder'
   devise_for :users
   root 'homes#top'
   get 'home/about' => 'homes#about', as: 'homes_about'
@@ -17,6 +15,4 @@ Rails.application.routes.draw do
     resources :book_comments, only: [:create, :destroy]
 
   end
-  get 'books/date' => 'books#date'
-  get 'books/rate' => 'books#rate'
 end
