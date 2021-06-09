@@ -23,10 +23,10 @@ class Book < ApplicationRecord
                         Book.all
                 end
   end
-  
+
   def self.find(find)
      return Book.all unless find
-     Book.where(['content LIKE ?', "%#{find}%"])
+     Book.where(['category LIKE ?', "%#{find}%"])
   end
 
 end
