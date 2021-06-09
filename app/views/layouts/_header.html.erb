@@ -14,7 +14,7 @@
           <li><%= link_to ' logout', destroy_user_session_path, method: :delete,class: 'fas fa-sign-out-alt nav-link text-light' %></li>
           <li><%= form_tag(find_path,:method => 'get') do %>
               <%= text_field_tag :find %>
-              <%= submit_tag '検索', :name => nil %>
+              <%= submit_tag '検索' %>
               <% end %>
           </li>
         <% else %>
